@@ -44,16 +44,18 @@ public class StudentController {
         return services.getAllStudents();
     }
 
-    @PostMapping("/students/{studentID}/{courseID}")
+    @PutMapping("/students/add/{studentID}/{courseID}")
     public void addCourseToStudent(@PathVariable String studentID,
                                    @PathVariable String courseID)
     {
         services.addCourseToStudent(studentID, courseID);
     }
 
-    @GetMapping("/students/{studentID}")
-    public List<Course> getStudentCourses(@PathVariable String studentID) {
-        return services.getStudentCourses(studentID);
+    @PutMapping("/students/remove/{studentID}/{courseID}")
+    public void removeCourseFromStudent(@PathVariable String studentID,
+                                        @PathVariable String courseID)
+    {
+        services.removeCourseFromStudent(studentID, courseID);
     }
 
     @GetMapping("student/{studentID}/{courseID}")

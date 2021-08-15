@@ -59,13 +59,17 @@ public class Services
         assert s != null;
         assert c != null;
         s.setCourse(c);
+        studentRepository.save(s);
     }
 
-    public List<Course> getStudentCourses(String studentID)
+    public void removeCourseFromStudent(String studentID, String courseID)
     {
         Student s = studentRepository.findById(studentID).orElse(null);
-        if(s == null) return null;
-        return s.getCourses();
+        Course c = courseRepository.findById(courseID).orElse(null);
+        assert s != null;
+        assert c != null;
+        s.getCourses().remove(c);
+        studentRepository.save(s);
     }
 
 
