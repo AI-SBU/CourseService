@@ -1,4 +1,4 @@
-package com.restservice.studentservices.ErrorHandling;
+package com.restservice.studentservices.Exceptoions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

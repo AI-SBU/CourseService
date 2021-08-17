@@ -21,26 +21,26 @@ public class CourseController
     @PostMapping("/courses")
     public void addCourse(@RequestBody Course course)
     {
-        courseService.addCourseToCatalog(course);
+        courseService.addCourse(course);
     }
 
     @DeleteMapping("courses/{courseID}")
     public void removeCourse(@PathVariable String courseID)
     {
-        courseService.removeCourseFromCatalog(courseID);
+        courseService.removeCourse(courseID);
     }
 
     @PutMapping("/courses/{courseID}")
     public void updateCourse(@RequestBody Course course,
                              @PathVariable String courseID)
     {
-        courseService.updateCourseInCatalog(course,courseID);
+        courseService.updateCourse(course,courseID);
     }
 
     @GetMapping("/courses/{courseID}")
     public Course getCourse(@PathVariable String courseID)
     {
-        return courseService.getCourseFromCatalog(courseID);
+        return courseService.getCourse(courseID);
     }
 
     @GetMapping("/courses")

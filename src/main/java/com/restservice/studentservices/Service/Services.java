@@ -85,22 +85,22 @@ public class Services
                 .orElse(null);
     }
 
-    public void addCourseToCatalog(Course course)
+    public void addCourse(Course course)
     {
         courseRepository.save(course);
     }
 
-    public void removeCourseFromCatalog(String courseID)
+    public void removeCourse(String courseID)
     {
         courseRepository.deleteById(courseID);
     }
 
-    public void updateCourseInCatalog(Course course, String courseID)
+    public void updateCourse(Course course, String courseID)
     {
         courseRepository.save(course);
     }
 
-    public Course getCourseFromCatalog(String courseID)
+    public Course getCourse(String courseID)
     {
         return courseRepository.findById(courseID).orElse(null);
     }
