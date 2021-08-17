@@ -4,6 +4,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
 
+/**
+ * The class is associated with error handling
+ * The member variables stores information about
+ * an error
+ */
+
 public class Error
 {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")

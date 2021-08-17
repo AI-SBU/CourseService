@@ -3,6 +3,10 @@ package com.restservice.studentservices.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * The class represents an entity
+ */
+
 @Entity
 public class Course
 {

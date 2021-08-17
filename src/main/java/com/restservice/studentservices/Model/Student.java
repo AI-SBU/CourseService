@@ -7,6 +7,10 @@ import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The class represents an entity
+ */
+
 @Entity
 public class Student
 {

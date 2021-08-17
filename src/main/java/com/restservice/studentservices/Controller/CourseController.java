@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Rest controller for Student entity
+ */
+
 @RestController
 public class CourseController
 {
